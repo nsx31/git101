@@ -88,7 +88,6 @@ Untracked files:
         newfile.txt
 ```
 
----
 
 #### **2. `git rm --cached` on Previously Tracked Files**
 - If the file was **already tracked in previous commits**:
@@ -115,11 +114,39 @@ Untracked files:
 
 After the commit, `trackedfile.txt` will no longer be part of the repository but will remain in your working directory.
 
----
 
-### **Key Points to Remember**
+#### **Key Points to Remember**
 1. **`git rm --cached` does not delete files from your working directory.** It only removes them from the staging area and (optionally) from tracking.
 2. **New files:** Using `git rm --cached` unstages them, leaving them untracked.
 3. **Previously committed files:** Using `git rm --cached` marks them as "removed from tracking," and they will be deleted from the repository in the next commit.
 
 ## 06. git branch
+```sh
+# lists all existing git branches in the repo
+git branch
+
+# create new git branch 
+git branch <branch_name>
+
+# switch to different git branch
+git switch <branch_name>
+```
+
+## 07. git merge : 
+There are two type of merges : 
+1. fast forward merg
+2. three-way merg
+
+There are two steps involved in doing a merge : 
+1. switch onto the branch that you want to merge into(the target branch).
+2. use the `git merge` command to pass in the name of the branch you are merging.
+```sh
+# fast forward merge
+git merge <branch_name>
+```
+
+```sh
+# check out the commit 
+git checkout <commit_hash>
+```
+
